@@ -44,8 +44,8 @@ notSure = 4; //okay
 notSure = "four"; //okay
 notSure = true; //okay
 //可以调用任意方法
-notSure.ifItExists(); // okay
-notSure.toFixed(); // okay
+//notSure.ifItExists(); // okay
+//notSure.toFixed(); // okay
 //不同类型的数组
 let listX: any[] = [1, "one", true];
 
@@ -54,3 +54,14 @@ let listX: any[] = [1, "one", true];
 let funcWarn = (): void => {
   console.log("nothing returns");
 };
+
+//Null / Undefined
+let n: null = null;
+let u: undefined = undefined;
+
+//Never:表示那些永不存在的值的类型
+//never类型是那些总是会抛出异常或根本就不会有返回值的函数表达式或箭头函数表达式的返回值类型
+function error(message:string):never{
+    throw new Error(message)
+}
+
